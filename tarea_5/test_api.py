@@ -2,7 +2,7 @@ import requests
 
 url = "http://127.0.0.1:8000/predict"
 
-# **ASEGÚRATE DE QUE ESTO ESTÉ CORRECTO EN TU ARCHIVO**
+
 client = {
     
     "lead_source": "organic_search",
@@ -10,6 +10,7 @@ client = {
     "annual_income": 80304.0
 }
 
+requests.post(url, json=client).json()
 
 response = requests.post(url, json=client).json()
 
